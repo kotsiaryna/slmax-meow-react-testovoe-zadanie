@@ -1,8 +1,13 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  gap: 30px;
+  padding: 40px;
   min-height: 100vh;
+}
+
+.heading {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }

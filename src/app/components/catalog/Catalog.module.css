@@ -1,0 +1,21 @@
+.catalog {
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.heading {
+  line-height: 2em;
+  letter-spacing: 0.1em;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: center;
+}
