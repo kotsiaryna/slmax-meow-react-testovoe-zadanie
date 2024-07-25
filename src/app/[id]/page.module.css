@@ -20,7 +20,7 @@
   letter-spacing: 0.05em;
 }
 
-.error {
+.wrapper {
   height: calc(100vh - 90px - 140px);
   display: flex;
   flex-direction: column;
@@ -29,6 +29,6 @@
   align-items: center;
 }
 
-.error a {
+.wrapper a {
   text-decoration: underline;
 }

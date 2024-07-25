@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from './page.module.css'
 import Image from "next/image";
 import img from '@/assets/product.png';
+import { notFound } from "next/navigation";
 
 type Props = {
   params: { id: string }
@@ -13,15 +14,13 @@ type Item = {
   price: number
 }
 
-const getProductById = async (id: string): Promise<Item | undefined> => {
+const getProductById = async (id: string): Promise<Item> => {
   const res = await fetch(`http://localhost:3000/goods/${id}`, {next: {revalidate: 60}})
-  if (!res.ok) {
-    throw new Error('Failed to fetch product')
-  }
-  if(res.status === 404) {
-    return 
-  }
-  
+
+  if (res.status === 404) notFound()
+
+  if (!res.ok) throw new Error('Failed to fetch product')
+
   return res.json()
 }
 
@@ -36,9 +35,7 @@ export async function generateStaticParams () {
 
 export default async function Page({ params } :Props ) {
   const product = await getProductById(params.id)
-  if(!product) {
-    return <div>Product not found</div>
-  }
+ 
   return <div className={styles.product}>
     <Link href='/' className={styles.back}>Вернуться в каталог</Link>
     <h2 className={styles.heading}>{product.name}</h2>

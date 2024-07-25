@@ -8,7 +8,7 @@ type Props ={
 
 function ErrorPage({error}: Props) {
   return (
-    <section className={styles.error}>
+    <section className={styles.wrapper}>
       <h2>Something went wrong</h2>
       <div>{error.message}</div>
       <Link href='/'>Вернуться в каталог</Link>
