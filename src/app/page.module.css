@@ -11,3 +11,11 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.error {
+  height: calc(100vh - 90px - 140px);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
