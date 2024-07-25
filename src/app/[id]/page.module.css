@@ -1,0 +1,34 @@
+.product {
+  min-height: calc(100vh - 90px - 140px);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.back {
+  width: 220px;
+  height: 50px;
+  align-self: flex-start;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(172, 204, 230, 0.247);
+  letter-spacing: 0.05em;
+}
+
+.error {
+  height: calc(100vh - 90px - 140px);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.error a {
+  text-decoration: underline;
+}
